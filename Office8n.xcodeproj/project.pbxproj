@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F345CEC1BD782A600792211 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F345CEB1BD782A600792211 /* Cocoa.framework */; settings = {ASSET_TAGS = (); }; };
+		0F345CF41BD782A600792211 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F345CF31BD782A600792211 /* main.m */; };
+		0F345CF71BD782A600792211 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CF51BD782A600792211 /* Credits.rtf */; };
+		0F345CFA1BD782A600792211 /* libpython2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F345CF91BD782A600792211 /* libpython2.7.dylib */; };
+		0F345CFC1BD782A600792211 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CFB1BD782A600792211 /* main.py */; };
+		0F345CFE1BD782A600792211 /* AppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CFD1BD782A600792211 /* AppDelegate.py */; };
+		0F345D011BD782A700792211 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CFF1BD782A700792211 /* MainMenu.xib */; };
+		0F345D031BD782A700792211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F345D021BD782A700792211 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F345CE81BD782A600792211 /* Office8n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Office8n.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F345CEB1BD782A600792211 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0F345CEE1BD782A600792211 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0F345CEF1BD782A600792211 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0F345CF01BD782A600792211 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0F345CF31BD782A600792211 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F345CF61BD782A600792211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0F345CF91BD782A600792211 /* libpython2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpython2.7.dylib; path = /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config/libpython2.7.dylib; sourceTree = "<absolute>"; };
+		0F345CFB1BD782A600792211 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		0F345CFD1BD782A600792211 /* AppDelegate.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = AppDelegate.py; sourceTree = "<group>"; };
+		0F345D001BD782A700792211 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0F345D021BD782A700792211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F345D041BD782A700792211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F345CE51BD782A600792211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F345CFA1BD782A600792211 /* libpython2.7.dylib in Frameworks */,
+				0F345CEC1BD782A600792211 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F345CDF1BD782A600792211 = {
+			isa = PBXGroup;
+			children = (
+				0F345CF11BD782A600792211 /* Office8n */,
+				0F345CEA1BD782A600792211 /* Frameworks */,
+				0F345CE91BD782A600792211 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F345CE91BD782A600792211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CE81BD782A600792211 /* Office8n.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F345CEA1BD782A600792211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CEB1BD782A600792211 /* Cocoa.framework */,
+				0F345CED1BD782A600792211 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F345CED1BD782A600792211 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CEE1BD782A600792211 /* AppKit.framework */,
+				0F345CEF1BD782A600792211 /* CoreData.framework */,
+				0F345CF01BD782A600792211 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0F345CF11BD782A600792211 /* Office8n */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CFB1BD782A600792211 /* main.py */,
+				0F345CFD1BD782A600792211 /* AppDelegate.py */,
+				0F345CFF1BD782A700792211 /* MainMenu.xib */,
+				0F345D021BD782A700792211 /* Assets.xcassets */,
+				0F345D041BD782A700792211 /* Info.plist */,
+				0F345CF81BD782A600792211 /* SharedLibraries */,
+				0F345CF21BD782A600792211 /* Supporting Files */,
+			);
+			path = Office8n;
+			sourceTree = "<group>";
+		};
+		0F345CF21BD782A600792211 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CF31BD782A600792211 /* main.m */,
+				0F345CF51BD782A600792211 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F345CF81BD782A600792211 /* SharedLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0F345CF91BD782A600792211 /* libpython2.7.dylib */,
+			);
+			name = SharedLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F345CE71BD782A600792211 /* Office8n */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F345D071BD782A700792211 /* Build configuration list for PBXNativeTarget "Office8n" */;
+			buildPhases = (
+				0F345CE41BD782A600792211 /* Sources */,
+				0F345CE51BD782A600792211 /* Frameworks */,
+				0F345CE61BD782A600792211 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Office8n;
+			productName = Office8n;
+			productReference = 0F345CE81BD782A600792211 /* Office8n.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F345CE01BD782A600792211 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = ftiff;
+				TargetAttributes = {
+					0F345CE71BD782A600792211 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = EM3ER8T33A;
+					};
+				};
+			};
+			buildConfigurationList = 0F345CE31BD782A600792211 /* Build configuration list for PBXProject "Office8n" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0F345CDF1BD782A600792211;
+			productRefGroup = 0F345CE91BD782A600792211 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F345CE71BD782A600792211 /* Office8n */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F345CE61BD782A600792211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F345CF71BD782A600792211 /* Credits.rtf in Resources */,
+				0F345CFE1BD782A600792211 /* AppDelegate.py in Resources */,
+				0F345CFC1BD782A600792211 /* main.py in Resources */,
+				0F345D011BD782A700792211 /* MainMenu.xib in Resources */,
+				0F345D031BD782A700792211 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F345CE41BD782A600792211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F345CF41BD782A600792211 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0F345CF51BD782A600792211 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F345CF61BD782A600792211 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0F345CFF1BD782A700792211 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F345D001BD782A700792211 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F345D051BD782A700792211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0F345D061BD782A700792211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0F345D081BD782A700792211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Office8n/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.fti.Office8n;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		0F345D091BD782A700792211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Office8n/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.fti.Office8n;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F345CE31BD782A600792211 /* Build configuration list for PBXProject "Office8n" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F345D051BD782A700792211 /* Debug */,
+				0F345D061BD782A700792211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F345D071BD782A700792211 /* Build configuration list for PBXNativeTarget "Office8n" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F345D081BD782A700792211 /* Debug */,
+				0F345D091BD782A700792211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F345CE01BD782A600792211 /* Project object */;
+}
