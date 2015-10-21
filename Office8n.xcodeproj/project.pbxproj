@@ -15,6 +15,8 @@
 		0F345CFE1BD782A600792211 /* AppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CFD1BD782A600792211 /* AppDelegate.py */; };
 		0F345D011BD782A700792211 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F345CFF1BD782A700792211 /* MainMenu.xib */; };
 		0F345D031BD782A700792211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F345D021BD782A700792211 /* Assets.xcassets */; };
+		4723BA4C1BD7EF3200576B7A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4723BA4A1BD7EF3200576B7A /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		4723BA4D1BD7EF3200576B7A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4723BA4B1BD7EF3200576B7A /* README.md */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		0F345D001BD782A700792211 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0F345D021BD782A700792211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F345D041BD782A700792211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4723BA4A1BD7EF3200576B7A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4723BA4B1BD7EF3200576B7A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		0F345CF21BD782A600792211 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4723BA4A1BD7EF3200576B7A /* LICENSE */,
+				4723BA4B1BD7EF3200576B7A /* README.md */,
 				0F345CF31BD782A600792211 /* main.m */,
 				0F345CF51BD782A600792211 /* Credits.rtf */,
 			);
@@ -170,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4723BA4C1BD7EF3200576B7A /* LICENSE in Resources */,
 				0F345CF71BD782A600792211 /* Credits.rtf in Resources */,
 				0F345CFE1BD782A600792211 /* AppDelegate.py in Resources */,
 				0F345CFC1BD782A600792211 /* main.py in Resources */,
@@ -185,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4723BA4D1BD7EF3200576B7A /* README.md in Sources */,
 				0F345CF41BD782A600792211 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +318,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Office8n/Info.plist;
@@ -329,7 +336,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Office8n/Info.plist;
@@ -363,6 +369,7 @@
 				0F345D091BD782A700792211 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

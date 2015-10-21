@@ -3,32 +3,48 @@
 #  AppDelegate.py
 #  Office8n
 #
-#  Created by francois on 21/10/15.
+#  Created by Francois Levaux-Tiffreau on 21/10/15.
 #  Copyright (c) 2015 ftiff. All rights reserved.
 #
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; version 2.
+#    
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#    
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
 
 from Foundation import *
 from AppKit import *
 from Cocoa import *
-from os.path import expanduser
 
 import objc
 import CoreFoundation
 
 class AppDelegate(NSObject):
     
+    # Global Variables
+    
+    homeDirectory = NSHomeDirectory()
+    
     # Setup Excel variables
     excelDropDown = objc.IBOutlet()
     excelLabel = objc.IBOutlet()
-    excelID = expanduser("~") + "/Library/Containers/com.microsoft.Excel/Data/Library/Preferences/com.microsoft.Excel"
+    excelID = homeDirectory + "/Library/Containers/com.microsoft.Excel/Data/Library/Preferences/com.microsoft.Excel"
     
     # Setup Word variables
     wordDropDown = objc.IBOutlet()
     wordLabel = objc.IBOutlet()
-    wordID = expanduser("~") + "/Library/Containers/com.microsoft.Word/Data/Library/Preferences/com.microsoft.Word"
+    wordID = homeDirectory + "/Library/Containers/com.microsoft.Word/Data/Library/Preferences/com.microsoft.Word"
     
     # Setup all languages
-    availableLanguages = {
+    codeToLanguage = {
         
                             "pt-BR": "Brazilian Portuguese",
                             "zh-CN": "Chinese (Simplified)",
@@ -49,32 +65,31 @@ class AppDelegate(NSObject):
                             }
 
     # Invert the dictionary. Not wonderful.
-    languagesToCode = {v: k for k, v in availableLanguages.items()}
+    languageToCode = {v: k for k, v in codeToLanguage.items()}
     
     
     def setupDropDown(self, _dropDown):
         _dropDown.removeAllItems()
-        for languageCode, language in self.availableLanguages.items():
+        for languageCode, language in self.codeToLanguage.items():
             _dropDown.addItemWithTitle_(language)
 
-    def setupLabel(self, _label, _id):
-        result = self.getPreference(_id, "AppleLanguages")
-        currentLanguage = self.availableLanguages.get(result, "Unknown")
+    def setupLabel(self, _label, _id, _dropDown):
+        result = self.getPreference(_id, "AppleLanguages", _dropDown)
+        currentLanguage = self.codeToLanguage.get(result, "Unknown")
         _label.setStringValue_("Current Language: " + currentLanguage)
 
     def applicationDidFinishLaunching_(self, sender):
-        NSLog("Application did finish launching.")
         
         self.setupDropDown(self.excelDropDown)
-        self.setupLabel(self.excelLabel, self.excelID)
+        self.setupLabel(self.excelLabel, self.excelID, self.excelDropDown)
 
         self.setupDropDown(self.wordDropDown)
-        self.setupLabel(self.wordLabel, self.wordID)
+        self.setupLabel(self.wordLabel, self.wordID, self.wordDropDown)
 
     @objc.IBAction
     def excelDropDownSelect_(self, sender):
         newLanguage = sender.titleOfSelectedItem()
-        newLanguageCode = self.languagesToCode.get(newLanguage, "en")
+        newLanguageCode = self.languageToCode.get(newLanguage, "en")
         
         self.excelLabel.setStringValue_("Setting language to: " + newLanguage)
         self.savePreference('AppleLanguages', newLanguageCode, self.excelID, self.excelLabel)
@@ -82,45 +97,33 @@ class AppDelegate(NSObject):
     @objc.IBAction
     def wordDropDownSelect_(self, sender):
         newLanguage = sender.titleOfSelectedItem()
-        newLanguageCode = self.languagesToCode.get(newLanguage, "en")
+        newLanguageCode = self.languageToCode.get(newLanguage, "en")
         
         self.wordLabel.setStringValue_("Setting language to: " + newLanguage)
         self.savePreference('AppleLanguages', newLanguageCode, self.wordID, self.wordLabel)
     
+    @objc.IBAction
+    def quitButton_(self, sender):
+        NSApp.terminate_(0)
     
-    def getPreference(self, appName, propertyName):
+    def getPreference(self, appName, propertyName, _dropDown):
         result = CoreFoundation.CFPreferencesCopyAppValue('AppleLanguages', appName)
-
         # if it's an array, return only first value
         if isinstance(result, NSArray):
             result = result[0]
-
+        language = self.codeToLanguage.get(result, "English")
+        _dropDown.selectItemWithTitle_(language)
         return result
-    
-    
-    def extractLanguage(self, input):
-        p = re.compile(ur'["\'](.*?)["\']')
-        result = ""
-        try:
-            result = re.search(p, input)
-            result = result2.group(1)
-        except ValueError:
-            result = "en"
-        finally:
-            return result
-
-#self.excelLabel.setStringValue_("Set to: " + propertyValue[0])
         
     
     def savePreference(self, propertyName, _value, appName, _label):
-        #TODO: Change from subprocess to native call
         propertyValue = []
         propertyValue.append(_value)
         CoreFoundation.CFPreferencesSetAppValue(propertyName, propertyValue, appName)
         CoreFoundation.CFPreferencesAppSynchronize(appName)
-        print "{appName}: {propertyName} = {propertyValue}".format(
+        NSLog("{appName}: {propertyName} = {propertyValue}".format(
                                                                    appName=appName,
                                                                    propertyName=propertyName,
                                                                    propertyValue=propertyValue
-                                                                   )
-        _label.setStringValue_("Set to: " + self.availableLanguages.get(propertyValue[0], "None"))
+                                                                   ))
+        _label.setStringValue_("Set to: " + self.codeToLanguage.get(propertyValue[0], "None"))
